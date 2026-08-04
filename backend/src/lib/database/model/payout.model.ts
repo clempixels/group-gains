@@ -15,7 +15,7 @@ export interface IPayout {
 
 // Extend Mongoose's Document and override _id type
 interface PayoutModel extends Omit<IPayout, "_id">, Document {
-  _id: string;
+  _id: mongoose.Schema.Types.ObjectId;
 }
 
 const payoutSchema: Schema<PayoutModel> = new Schema(
