@@ -15,7 +15,7 @@ export interface IGroup {
 
 // Extend Mongoose's Document and override _id type
 interface GroupModel extends Omit<IGroup, "_id">, Document {
-  _id: string;
+  _id: mongoose.Schema.Types.ObjectId;
 }
 
 const groupSchema: Schema<GroupModel> = new Schema(
