@@ -13,7 +13,7 @@ export interface IIntegration {
 
 // Extend Mongoose's Document and override _id type
 interface IntegrationModel extends Omit<IIntegration, "_id">, Document {
-  _id: string;
+  _id: mongoose.Schema.Types.ObjectId;
 }
 
 const integrationSchema: Schema<IntegrationModel> = new Schema(
