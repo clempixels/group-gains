@@ -13,7 +13,7 @@ export interface ICustomer {
 
 // Extend Mongoose's Document and override _id type
 interface CustomerModel extends Omit<ICustomer, "_id">, Document {
-  _id: string;
+  _id: mongoose.Schema.Types.ObjectId;
 }
 
 const customerSchema: Schema<CustomerModel> = new Schema(
