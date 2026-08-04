@@ -34,7 +34,7 @@ export interface ISubscription {
 
 // Extend Mongoose's Document and override _id type
 interface SubscriptionModel extends Omit<ISubscription, "_id">, Document {
-  _id: string;
+  _id: mongoose.Schema.Types.ObjectId;
 }
 
 const subscriptionSchema: Schema<SubscriptionModel> = new Schema(
